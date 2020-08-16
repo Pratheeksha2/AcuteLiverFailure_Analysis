@@ -21,15 +21,24 @@ import seaborn as sb
 from matplotlib.pyplot import scatter as sm
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split as tts
-
 ```
 
+## Step 1: Data Collection
+Collecting the data into dataframe from the file path
+```markdown
+df=pd.read_csv("G:\\COURSES\\python with mac learning Delithe\\DataSets\\Project\\ALF_Data.csv")
+```
+## Step 2: Data Analysis
+Shows the number of rows and columns in the dataset (rows x columns)
+```markdown
+df.shape
 
+Output: 
+(8785, 30)
+```
 
-### Jekyll Themes
+Shows first 5 rows of dataset
+```markdown
+df.head()
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Pratheeksha2/AcuteLiverFailure_Analysis/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```
