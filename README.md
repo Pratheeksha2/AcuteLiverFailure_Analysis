@@ -26,14 +26,14 @@ from sklearn.metrics import confusion_matrix
 ```
 
 ## Step 1: Data Collection
-1. Collecting the data into dataframe from the file path
+Collecting the data into dataframe from the file path
 ```markdown
 df=pd.read_csv("G:\\COURSES\\python with mac learning Delithe\\DataSets\\Project\\ALF_Data.csv")
 ```
 
 ## Step 2: Data Analysis
 In this dataset, the target attribute is 'ALF', which shows if patient has liver disease or not based on the observations. Hence, Its a classification problem as records need to be classified based on 0 and 1
-1. Shows the number of rows and columns in the dataset (rows,columns).
+Shows the number of rows and columns in the dataset (rows,columns).
 ```markdown
 df.shape
 
