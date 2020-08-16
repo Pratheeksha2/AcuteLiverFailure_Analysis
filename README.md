@@ -2,28 +2,25 @@
 
 Acute liver failure is the appearance of severe complications rapidly after the first signs of liver disease.Since 1990, the JPAC Center for Health Diagnosis and Control, has conducted nationwide surveys of Indian adults. Using trained personnel, the center had collected a wide variety of demographic and health information using direct interviews, examinations, and blood samples. The data setconsists of selected information from 8,785 adults 20 years of age or older taken from the 2008–2009 and 2014–2015 surveys.
 
+This dataset is downloaded from Kaggle and the link is mentioned below:
+https://www.kaggle.com/rahul121/acute-liver-failure
 
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+the steps included in this analysis are:
+1. Data Collection
+2. Data Analysis
+3. Data Visualization
+4. Data Cleaning
+5. Algorithm selection
+6. Prediction
+7. Saving the Model
 
 ```markdown
-Syntax highlighted code block
+import pandas as pd
+import seaborn as sb
+from matplotlib.pyplot import scatter as sm
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split as tts
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
