@@ -61,7 +61,7 @@ df.tail()
 ```
 df.count()
 ```
-![](Images/Screenshot (9).png)
+![](Images/Screenshot%20(9).png)
 
 2785 records donot have ALF,which is the target variable.
 
@@ -69,7 +69,7 @@ df.count()
 ```
 df.info()
 ```
-![](Images/Screenshot (10).png)
+![](Images/Screenshot%20(10).png)
 
 Gives info about the null values in data,memory usage and datatypes.
 
