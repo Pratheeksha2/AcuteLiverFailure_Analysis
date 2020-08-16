@@ -312,12 +312,12 @@ array([0., 0., 0., ..., 0., 0., 0.])
   
  ## Step 7: Saving the Model
  ### 1. syntax: pickle.dump(model_name,file_name)
-  ```
+ ```
  import pickle
- file_name=open('ALF.pkl','wb') #write binary file
+ file_name=open('ALF.pkl','wb')   #write binary file
  model_name=logreg
  pickle.dump(model_name,file_name)
-  ```
+ ```
 
 ### 2.Loading model
 This model can be used again in future by importing, for analysing similar dataset without having to do all the above steps.
