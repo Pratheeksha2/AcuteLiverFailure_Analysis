@@ -45,8 +45,9 @@ Output:
 2. Shows first 5 rows of dataset
 ```
 df.head()
-![Image](Images/Datahead(1).png)
 ```
+![](Images/1.Datahead(1).png)
+
 
 3. Shows last 5 rows of dataset
 ```
