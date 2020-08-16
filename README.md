@@ -47,7 +47,7 @@ Output:
 ```markdown
 df.head()
 ```
-image
+!.[.].(images/Datahead(1).png)
 
 3. Shows last 5 rows of dataset
 ```markdown
