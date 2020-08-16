@@ -180,7 +180,7 @@ sb.pairplot(df,hue='ALF',height=5,markers=['o','D'],diag_kind='kde',kind='reg')
 ```
 df.corr()
 ```
-![](Images/9. Corr.png)
+![](Images/9.%20Corr.png)
 Note: Its a part of the output as the dataset is larger. Heatmap gives complete information.
 
 9. Heatmap
