@@ -33,7 +33,7 @@ df=pd.read_csv("G:\\COURSES\\python with mac learning Delithe\\DataSets\\Project
 
 ## Step 2: Data Analysis
 In this dataset, the target attribute is 'ALF', which shows if patient has liver disease or not based on the observations. Hence, Its a classification problem as records need to be classified based on 0 and 1
-1. Shows the number of rows and columns in the dataset (rows,columns)
+1. Shows the number of rows and columns in the dataset (rows,columns).
 ```markdown
 df.shape
 
