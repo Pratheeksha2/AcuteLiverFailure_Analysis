@@ -92,7 +92,7 @@ Output:
 array(['east', 'south', 'north', 'west'], dtype=object)
 ```
 
-### 9. Replacing regions bt integers
+### 9. Replacing regions with integers
 ```
 cla={'east':1,'west':2,'north':3,'south':4}
 df.replace(cla,inplace=True)
@@ -187,7 +187,7 @@ df.corr()
 
 Note: Its a part of the output as the dataset is larger. Heatmap gives complete information.
 
-9. Heatmap
+### 9. Heatmap
 ```
 plt.subplots(figsize=(20,15))
 sb.set(font_scale=0.8)
