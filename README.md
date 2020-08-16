@@ -240,10 +240,10 @@ Drops all the above columns from dataset.
 
 ### 3. To check shape of dataset after dropping some columns
 ```
-       df.shape
+   df.shape
 
-       Output:
-       (4334, 22)
+   Output:
+   (4334, 22)
 ```
 
 ## Step 5: Algorithm Selection
