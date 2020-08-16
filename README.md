@@ -60,90 +60,26 @@ df.tail()
 4. Counting the number of instances in each column
 ```
 df.count()
-
-Output:
-Age                       8785\n
-Gender                    8785
-Region                    8785
-Weight                    8591
-Height                    8594
-Body Mass Index           8495
-Obesity                   8495
-Waist                     8471
-Maximum Blood Pressure    8481
-Minimum Blood Pressure    8409
-Good Cholesterol          8768
-Bad Cholesterol           8767
-Total Cholesterol         8769
-Dyslipidemia              8785
-PVD                       8785
-Physical Activity         8775
-Education                 8765
-Unmarried                 8333
-Income                    7624
-Source of Care            8785
-PoorVision                8222
-Alcohol Consumption       8785
-HyperTension              8705
-Family  HyperTension      8785
-Diabetes                  8783
-Family Diabetes           8785
-Hepatitis                 8763
-Family Hepatitis          8779
-Chronic Fatigue           8750
-ALF                       6000
-dtype: int64
 ```
+![](Images/Screenshot (9).png)
+
 2785 records donot have ALF,which is the target variable.
 
 5. To show infromation about data
 ```
 df.info()
-
-Output:
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 8785 entries, 0 to 8784
-Data columns (total 30 columns):
-Age                       8785 non-null int64
-Gender                    8785 non-null object
-Region                    8785 non-null object
-Weight                    8591 non-null float64
-Height                    8594 non-null float64
-Body Mass Index           8495 non-null float64
-Obesity                   8495 non-null float64
-Waist                     8471 non-null float64
-Maximum Blood Pressure    8481 non-null float64
-Minimum Blood Pressure    8409 non-null float64
-Good Cholesterol          8768 non-null float64
-Bad Cholesterol           8767 non-null float64
-Total Cholesterol         8769 non-null float64
-Dyslipidemia              8785 non-null int64
-PVD                       8785 non-null int64
-Physical Activity         8775 non-null float64
-Education                 8765 non-null float64
-Unmarried                 8333 non-null float64
-Income                    7624 non-null float64
-Source of Care            8785 non-null object
-PoorVision                8222 non-null float64
-Alcohol Consumption       8785 non-null int64
-HyperTension              8705 non-null float64
-Family  HyperTension      8785 non-null int64
-Diabetes                  8783 non-null float64
-Family Diabetes           8785 non-null int64
-Hepatitis                 8763 non-null float64
-Family Hepatitis          8779 non-null float64
-Chronic Fatigue           8750 non-null float64
-ALF                       6000 non-null float64
-dtypes: float64(21), int64(6), object(3)
-memory usage: 2.0+ MB
 ```
+![](Images/Screenshot (10).png)
+
 Gives info about the null values in data,memory usage and datatypes.
 
 6. Describes the data
 ```
 df.describe()
 ```
-image
+![](Images/3. Datadescribe(1).png)
+![](Images/4.datadescribe(2).png)
+![](Images/5.datadescribe(3).png)
 
 7. To replace M and F to integer values
 ```
