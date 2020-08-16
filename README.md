@@ -14,6 +14,7 @@ the steps included in this analysis are:
 6. Prediction
 7. Saving the Model
 
+### Importing Libraries
 ```markdown
 import pandas as pd
 import seaborn as sb
@@ -23,7 +24,7 @@ from sklearn.model_selection import train_test_split as tts
 
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
 
 ### Jekyll Themes
 
