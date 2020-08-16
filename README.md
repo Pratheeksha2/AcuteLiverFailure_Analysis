@@ -310,9 +310,9 @@ Hence, for this confusion matrix is used
        [  43,   12]], dtype=int64)
  ```    
  
- ## Step 7: Saving the Model
- To save the created model for future prediction
- ### 1. syntax: pickle.dump(model_name,file_name)
+## Step 7: Saving the Model
+To save the created model for future prediction
+### 1. syntax: pickle.dump(model_name,file_name)
  ```
  import pickle
  file_name=open('ALF.pkl','wb')   #write binary file
