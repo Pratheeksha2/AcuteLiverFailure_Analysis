@@ -3,7 +3,7 @@
 Acute liver failure is the appearance of severe complications rapidly after the first signs of liver disease.Since 1990, the JPAC Center for Health Diagnosis and Control, has conducted nationwide surveys of Indian adults. Using trained personnel, the center had collected a wide variety of demographic and health information using direct interviews, examinations, and blood samples. The data setconsists of selected information from 8,785 adults 20 years of age or older taken from the 2008–2009 and 2014–2015 surveys.
 
 This dataset is downloaded from Kaggle and the link is mentioned below:
-[](https://www.kaggle.com/rahul121/acute-liver-failure)
+https://www.kaggle.com/rahul121/acute-liver-failure
 
 The steps included in this analysis are:
 1. Data Collection
@@ -27,14 +27,14 @@ from sklearn.metrics import confusion_matrix
 
 ## Step 1: Data Collection
 Collecting the data into dataframe from the file path
-```markdown
+```
 df=pd.read_csv("G:\\COURSES\\python with mac learning Delithe\\DataSets\\Project\\ALF_Data.csv")
 ```
 
 ## Step 2: Data Analysis
 In this dataset, the target attribute is 'ALF', which shows if patient has liver disease or not based on the observations. Hence, Its a classification problem as records need to be classified based on 0 and 1
 Shows the number of rows and columns in the dataset (rows,columns).
-```markdown
+```
 df.shape
 
 Output: 
@@ -43,18 +43,18 @@ Output:
 
 
 2. Shows first 5 rows of dataset
-```markdown
+```
 df.head()
 ![](Images/Datahead(1).png)
 ```
 3. Shows last 5 rows of dataset
-```markdown
+```
 df.tail()
 ```
 image
 
 4. Counting the number of instances in each column
-```markdown
+```
 df.count()
 
 Output:
@@ -93,7 +93,7 @@ dtype: int64
 2785 records donot have ALF,which is the target variable.
 
 5. To show infromation about data
-```markdown
+```
 df.info()
 
 Output:
@@ -136,19 +136,19 @@ memory usage: 2.0+ MB
 Gives info about the null values in data,memory usage and datatypes.
 
 6. Describes the data
-```markdown
+```
 df.describe()
 ```
 image
 
 7. To replace M and F to integer values
-```markdown
+```
 classes={'M':0,'F':1}
 df.replace(classes,inplace=True)
 ```
 
 8. Checking unique instances in Region column
-```markdown
+```
 df['Region'].unique()
 
 Output:
@@ -156,13 +156,13 @@ array(['east', 'south', 'north', 'west'], dtype=object)
 ```
 
 9. Replacing regions bt integers
-```markdown
+```
 cla={'east':1,'west':2,'north':3,'south':4}
 df.replace(cla,inplace=True)
 ```
 
 10. Finding unique instances in 'Source of care' column
-```markdown
+```
 df['Source of Care'].unique()
 
 Output:
@@ -171,21 +171,21 @@ array(['Governament Hospital', 'Never Counsulted', 'Private Hospital',
 ```
 
 11. Replacing Source of care instances by integers
-```markdown
+```
 ses={'Governament Hospital':1,'Never Counsulted':2,'Private Hospital':3,'clinic':4,' ':5}
 df.replace(ses,inplace=True)
 ```
 
 ## Step 3: Data Visualization
 1. To plot bar graph for 'Region'
-```markdown
+```
 sb.countplot(df['Region'])
 ```
 image
 It shows more records are of the people from east.
 
 2. To plot bar graph for 'ALF'
-```markdown
+```
 sb.countplot(df['ALF'])
 ```
 image
@@ -193,7 +193,7 @@ image
 This dataset has more records of patients with no liver disease.
 
 3. To count ALF instances
-```markdown
+```
 df['ALF'].value_counts()
 
 Output:
@@ -206,14 +206,14 @@ image
 0= 5536 patients donot have liver acute liver failure
 
 4. To plot bar grapgh for 'Gender'
-```markdown
+```
 sb.countplot(df['Gender'])
 ```
 image
 The number of male records is more than the female
 
 5. To count the instances of 'Gender'
-```markdown
+```
 df['Gender'].value_counts()
 
 Output:
@@ -226,27 +226,27 @@ Count of male and female records
 0= Male, 1= Female
 
 6. To check relation between SOC and ALF
-```markdown
+```
 sm(df['Source of Care'],df['ALF'],color='g')
 ```
 image
 This shows when source of care is present, patient may or might have disease.So, it isnt highly correlated in prdiction
 
 7. Pairplot shows the relation between all attributes
-```markdown
+```
 sb.pairplot(df,hue='ALF',height=5,markers=['o','D'],diag_kind='kde',kind='reg')
 ```
 'It shows how two attributes and their instances are correlated, if they are positively correlated or negatively by represting it by uphill and downhill.
 
 8.To show the correlation between 2 attributes
-```markdown
+```
 df.corr()
 ```
 image
 Note: Its a part of the output as the dataset is larger. Heatmap gives complete information.
 
 9. Heatmap
-```markdown
+```
 plt.subplots(figsize=(20,15))
 sb.set(font_scale=0.8)
 x=sb.heatmap(df.corr(),annot=True,cmap='coolwarm')  #now it shows correlation between the attributes
@@ -275,7 +275,7 @@ So,in these pairs, one attribute in each has to be removed which is less correla
 to the target attribue i.e., ALF(Acute liver failure).
 1. Gender is less correlated   2. weight,obesity and BMI are less correlated than  waist. 
 3. Max B.P is less correlated than Hypertension and Age 
-```markdown
+```
 df.drop('Gender',axis=1,inplace=True)
 df.drop('Weight',axis=1,inplace=True)
 df.drop('Maximum Blood Pressure',axis=1,inplace=True)
@@ -289,12 +289,12 @@ df.drop('Source of Care',axis=1,inplace=True)  #source of care does not affect  
 Drops all the above columns from dataset.
 
 2. To drop null values if any
-```markdown
+```
 df.dropna(inplace=True)
 ```
 
 3. To check shape of dataset after dropping some columns
-```markdown
+```
 df.shape
 
 Output:
@@ -310,7 +310,7 @@ x=df.iloc[:,:-1].values   #All rows and 0-3 columns in values and no column name
 y=df.iloc[:,-1].values    #All rows and only target column
 
 2. From this loop,can find which random state and test_size gives highest accuracy with printing the random_state
-```markdown
+```
        for i in range(1,1000):
            print(i)
            x_train,x_test,y_train,y_test=tts(x,y,test_size=0.25,random_state=i)
@@ -325,12 +325,12 @@ From the above code, can be concluded that having test_size=0.25 and random_stat
 This helps in choosing optimal value for random_state
 
 3. Dividing values to training and testing set.
-```markdown
+```
 x_train,x_test,y_train,y_test=tts(x,y,test_size=0.25,random_state=238)
 ```
 
 4. Creating Object
-```markdown
+```
 logreg=LogisticRegression() 
 logreg.fit(x_train,y_train)   #learning step (give data to model to learn)
 loregaccuracy=logreg.score(x_test,y_test)
@@ -343,7 +343,7 @@ Output:
 ## Step 6: Prediction
 This model has accuracy of 95.2% in predicting the disease.
 1. To check predicted values
-```markdown
+```
 logregpred=logreg.predict(x_test)
 logregpred 
 
@@ -354,7 +354,7 @@ array([0., 0., 0., ..., 0., 0., 0.])
 2.To compare right vs wrong predictions
   Here its comparing to knw how many matches the actual prdiction and how many are wrongly predicted.
   Hence, for this confusion matrix is used
-  ```markdown
+  ```
   conmat=confusion_matrix(y_test,logregpred)
   conmat
   
@@ -365,7 +365,7 @@ array([0., 0., 0., ..., 0., 0., 0.])
   
   ## Step 7: Saving the Model
   1. syntax: pickle.dump(model_name,file_name)
-  ```markdown
+  ```
  import pickle
  file_name=open('ALF.pkl','wb') #write binary file
  model_name=logreg
@@ -374,11 +374,11 @@ array([0., 0., 0., ..., 0., 0., 0.])
 
 2. Loading model
 This model can be used again in future by importing, for analysing similar dataset without having to do all the above steps.
-```markdown
+```
 loaded_model=pickle.load(open('ALF.pkl','rb'))
 ```
 
 3. Using loaded model
-```markdown
+```
 loaded_model.score(x_test,y_test)
 ```
