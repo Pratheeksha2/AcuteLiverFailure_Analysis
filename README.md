@@ -219,6 +219,7 @@ So,in these pairs, one attribute in each has to be removed which is less correla
 to the target attribue i.e., ALF(Acute liver failure).
 1. Gender is less correlated   2. weight,obesity and BMI are less correlated than  waist. 
 3. Max B.P is less correlated than Hypertension and Age 
+
 ```
 df.drop('Gender',axis=1,inplace=True)
 df.drop('Weight',axis=1,inplace=True)
@@ -234,15 +235,15 @@ Drops all the above columns from dataset.
 
 ### 2. To drop null values if any
 ```
-df.dropna(inplace=True)
+  df.dropna(inplace=True)
 ```
 
 ### 3. To check shape of dataset after dropping some columns
 ```
-df.shape
+       df.shape
 
-Output:
-(4334, 22)
+       Output:
+       (4334, 22)
 ```
 
 ## Step 5: Algorithm Selection
@@ -250,8 +251,10 @@ This is a classification problem as the target attribute has 2 type of instance 
 So, the people have to be classified to these two groups.As this is a classification problem, I am using "Logistic Regression" algorithm.
 
 ### 1. Creating arrays for the model
+```
 x=df.iloc[:,:-1].values   #All rows and 0-3 columns in values and no column names its same as [:,0:4]
 y=df.iloc[:,-1].values    #All rows and only target column
+```
 
 ### 2. From this loop,can find which random state and test_size gives highest accuracy with printing the random_state
 ```
