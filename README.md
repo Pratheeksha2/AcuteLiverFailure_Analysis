@@ -47,20 +47,22 @@ Output:
 df.head()
 ```
 ![](Images/1.Datahead(1).png)
+![](Images/1.Datahead(2).png)
 
 
 3. Shows last 5 rows of dataset
 ```
 df.tail()
 ```
-image
+![](Images/2.Datatail(1).png)
+![](Images/2.Datatail(2).png)
 
 4. Counting the number of instances in each column
 ```
 df.count()
 
 Output:
-Age                       8785
+Age                       8785\n
 Gender                    8785
 Region                    8785
 Weight                    8591
