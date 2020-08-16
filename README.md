@@ -40,14 +40,12 @@ Output:
 (8785, 30)
 ```
 
-
 ### 2. Shows first 5 rows of dataset
 ```
 df.head()
 ```
 ![](Images/1.Datahead(1).png)
 ![](Images/1.Datahead(2).png)
-
 
 ### 3. Shows last 5 rows of dataset
 ```
@@ -121,6 +119,7 @@ df.replace(ses,inplace=True)
 sb.countplot(df['Region'])
 ```
 ![](Images/6.plotregion.png)
+
 It shows more records are of the people from east.
 
 ### 2. To plot bar graph for 'ALF'
@@ -128,6 +127,7 @@ It shows more records are of the people from east.
 sb.countplot(df['ALF'])
 ```
 ![](Images/pairALF.png)
+
 1 represents the patients with liver disease and 0 represents the patients having no liver disease.
 This dataset has more records of patients with no liver disease.
 
@@ -148,6 +148,7 @@ Name: ALF, dtype: int64
 sb.countplot(df['Gender'])
 ```
 ![](Images/plotgender.png)
+
 The number of male records is more than the female
 
 ### 5. To count the instances of 'Gender'
@@ -167,6 +168,7 @@ Count of male and female records
 sm(df['Source of Care'],df['ALF'],color='g')
 ```
 ![](Images/7.SOCalfSM.png)
+
 This shows when source of care is present, patient may or might have disease.So, it isnt highly correlated in prdiction
 
 ### 7. Pairplot shows the relation between all attributes
@@ -174,6 +176,7 @@ This shows when source of care is present, patient may or might have disease.So,
 sb.pairplot(df,hue='ALF',height=5,markers=['o','D'],diag_kind='kde',kind='reg')
 ```
 ![](Images/8.pairplot.png)
+
 'It shows how two attributes and their instances are correlated, if they are positively correlated or negatively by represting it by uphill and downhill.
 
 ### 8.To show the correlation between 2 attributes
@@ -181,6 +184,7 @@ sb.pairplot(df,hue='ALF',height=5,markers=['o','D'],diag_kind='kde',kind='reg')
 df.corr()
 ```
 ![](Images/9.%20Corr.png)
+
 Note: Its a part of the output as the dataset is larger. Heatmap gives complete information.
 
 9. Heatmap
@@ -191,6 +195,7 @@ x=sb.heatmap(df.corr(),annot=True,cmap='coolwarm')  #now it shows correlation be
 plt.show()
 ```
 ![](Images/heatmap.png)
+
 Heat map is used to find the correlation betweeen attributes and the attributes that are less 
 correlated to eachother and highly correlated to the target variable have to be kept for analysis.
 If the two attriubtes other than the target variable is kept for analysis, it decreases the accuracy of the model.
@@ -198,7 +203,7 @@ If the two attriubtes other than the target variable is kept for analysis, it de
 ## Step 4: Data Cleaning
 This is to remove or drop unwanted attributes to increase the accuracy of our model.
 
-### 1. 
+### 1. Removing unwanted columns
 From the above heatmap, now the independent attributes that are highly correlated 
 can be removed which increases the quality and accuracy of the modal.
 In this the attributes:
@@ -320,4 +325,8 @@ loaded_model=pickle.load(open('ALF.pkl','rb'))
 ### 3. Using loaded model
 ```
 loaded_model.score(x_test,y_test)
+
+Output:
+0.9520295202952029
+
 ```
