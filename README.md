@@ -299,17 +299,19 @@ array([0., 0., 0., ..., 0., 0., 0.])
 ```
 
 ### 2.To compare right vs wrong predictions
-  Here its comparing to knw how many matches the actual prdiction and how many are wrongly predicted.
-  Hence, for this confusion matrix is used
-  ```
-  conmat=confusion_matrix(y_test,logregpred)
-  conmat
+Here its comparing to knw how many matches the actual prdiction and how many are wrongly predicted.
+Hence, for this confusion matrix is used
+```
+ conmat=confusion_matrix(y_test,logregpred)
+ conmat
   
-  Output:
-  array([[1020,    9],
+ Output:
+ array([[1020,    9],
        [  43,   12]], dtype=int64)
- ```     
+ ```    
+ 
  ## Step 7: Saving the Model
+ To save the created model for future prediction
  ### 1. syntax: pickle.dump(model_name,file_name)
  ```
  import pickle
