@@ -5,7 +5,7 @@ Acute liver failure is the appearance of severe complications rapidly after the 
 This dataset is downloaded from Kaggle and the link is mentioned below:
 https://www.kaggle.com/rahul121/acute-liver-failure
 
-the steps included in this analysis are:
+The steps included in this analysis are:
 1. Data Collection
 2. Data Analysis
 3. Data Visualization
@@ -23,7 +23,6 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split as tts
 from sklearn.metrics import confusion_matrix
-
 ```
 
 ## Step 1: Data Collection
