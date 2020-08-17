@@ -65,6 +65,15 @@ df.count()
 ### 5. To show infromation about data
 ```
 df.info()
+
+Output:
+hello
+hai
+hey
+yesss
+you
+no
+wow
 ```
 ![](Images/Screenshot%20(10).png)
 
