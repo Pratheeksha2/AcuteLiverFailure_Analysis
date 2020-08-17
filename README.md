@@ -91,7 +91,7 @@ Chronic Fatigue           8750
 ALF                       6000
 dtype: int64
 ```
-![](Images/Screenshot%20(9).png)
+(![](Images/Screenshot%20(9).png))
 
 2785 records donot have ALF,which is the target variable.
 
@@ -136,7 +136,7 @@ ALF                       6000 non-null float64
 dtypes: float64(21), int64(6), object(3)
 memory usage: 2.0+ MB
 ```
-![](Images/Screenshot%20(10).png)
+(![](Images/Screenshot%20(10).png))
 
 Gives info about the null values in data,memory usage and datatypes.
 
