@@ -37,6 +37,7 @@ In this dataset, the target attribute is 'ALF', which shows if patient has liver
 ### 1. Shows the number of rows and columns in the dataset (rows,columns).
 ```
 df.shape
+
 Output: 
 (8785, 30)
 ```
