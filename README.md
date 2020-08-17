@@ -31,6 +31,7 @@ from sklearn.metrics import confusion_matrix
 df=pd.read_csv("G:\\COURSES\\python with mac learning Delithe\\DataSets\\Project\\ALF_Data.csv")
 ```
 
+
 ## Step 2: Data Analysis
 In this dataset, the target attribute is 'ALF', which shows if patient has liver disease or not based on the observations. Hence, Its a classification problem as records need to be classified based on 0 and 1
 ### 1. Shows the number of rows and columns in the dataset (rows,columns).
@@ -91,7 +92,6 @@ Chronic Fatigue           8750
 ALF                       6000
 dtype: int64
 ```
-(![](Images/Screenshot%20(9).png))
 
 2785 records donot have ALF,which is the target variable.
 
@@ -136,7 +136,6 @@ ALF                       6000 non-null float64
 dtypes: float64(21), int64(6), object(3)
 memory usage: 2.0+ MB
 ```
-(![](Images/Screenshot%20(10).png))
 
 Gives info about the null values in data,memory usage and datatypes.
 
@@ -182,6 +181,7 @@ array(['Governament Hospital', 'Never Counsulted', 'Private Hospital',
 ses={'Governament Hospital':1,'Never Counsulted':2,'Private Hospital':3,'clinic':4,' ':5}
 df.replace(ses,inplace=True)
 ```
+
 
 ## Step 3: Data Visualization
 ### 1. To plot bar graph for 'Region'
@@ -270,6 +270,7 @@ Heat map is used to find the correlation betweeen attributes and the attributes 
 correlated to eachother and highly correlated to the target variable have to be kept for analysis.
 If the two attriubtes other than the target variable is kept for analysis, it decreases the accuracy of the model.
 
+
 ## Step 4: Data Cleaning
 This is to remove or drop unwanted attributes to increase the accuracy of our model.
 
@@ -316,6 +317,7 @@ Drops all the above columns from dataset.
    (4334, 22)
 ```
 
+
 ## Step 5: Algorithm Selection
 This is a classification problem as the target attribute has 2 type of instance which are 0 and 1 to indicate if a patient is diseased or not.
 So, the people have to be classified to these two groups.As this is a classification problem, I am using "Logistic Regression" algorithm.
@@ -357,6 +359,7 @@ Output:
 95.20295202952029
 ```
 
+
 ## Step 6: Prediction
 This model has accuracy of 95.2% in predicting the disease.
 ### 1. To check predicted values
@@ -380,6 +383,7 @@ Hence, for this confusion matrix is used
        [  43,   12]], dtype=int64)
  ```    
  
+
 ## Step 7: Saving the Model
 To save the created model for future prediction
 ### 1. syntax: pickle.dump(model_name,file_name)
