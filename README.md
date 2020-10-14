@@ -1,6 +1,6 @@
 # Acute Liver Failure Patients Analysis using Machine Learning
 
-Acute liver failure is the appearance of severe complications rapidly after the first signs of liver disease.Since 1990, the JPAC Center for Health Diagnosis and Control, has conducted nationwide surveys of Indian adults. Using trained personnel, the center had collected a wide variety of demographic and health information using direct interviews, examinations, and blood samples. The data setconsists of selected information from 8,785 adults 20 years of age or older taken from the 2008–2009 and 2014–2015 surveys.
+Acute liver failure is the appearance of severe complications rapidly after the first signs of liver disease.Since 1990, the JPAC Center for Health Diagnosis and Control, has conducted nationwide surveys of Indian adults.Using trained personnel, the center had collected a wide variety of demographic and health information using direct interviews, examinations, and blood samples.The data setconsists of selected information from 8,785 adults 20 years of age or older taken from the 2008–2009 and 2014–2015 surveys.
 
 This dataset is downloaded from Kaggle and the link is:
 https://www.kaggle.com/rahul121/acute-liver-failure
